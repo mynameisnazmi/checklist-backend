@@ -12,16 +12,15 @@ export const getUsers = async (req, res) => {
 };
 
 export const Auth = async (req, res) => {
-  //const { nik } = req.body;
-  //console.log(req.body);
-  try {
-    const response = await Users.findOne({
-      where: {
-        nik: 14077,
-      },
-    });
-    res.json(response);
-  } catch (error) {
-    console.log(error.message);
-  }
+  console.log(req.body.nik);
+  // try {
+  //   const response = await Users.findOne({
+  //     where: {
+  //       nik: 14077,
+  //     },
+  //   });
+  //   res.json(response);
+  // } catch (error) {
+  //   console.log(error.message);
+  // }
 };
