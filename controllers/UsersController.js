@@ -1,8 +1,8 @@
-import Users from "../models/UserModel.js";
+const Users = require("../models/UserModel");
 //import path from "path";
 //import fs from "fs";
 
-export const getUsers = async (req, res) => {
+const getUsers = async (req, res) => {
   try {
     const response = await Users.findAll();
     res.json(response);
@@ -11,16 +11,22 @@ export const getUsers = async (req, res) => {
   }
 };
 
-export const Auth = async (req, res) => {
-  console.log(req.body.nik);
-  // try {
-  //   const response = await Users.findOne({
-  //     where: {
-  //       nik: 14077,
-  //     },
-  //   });
-  //   res.json(response);
-  // } catch (error) {
-  //   console.log(error.message);
-  // }
+// export const Auth = async (req, res) => {
+//   console.log(req.body.nik);
+//   try {
+//     const response = await Users.findOne({
+//       where: {
+//         nik: 14077,
+//       },
+//     });
+//     res.json(response);
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+
+// Export of all methods as object
+module.exports = {
+  getUsers,
+  // method2,
 };
