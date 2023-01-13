@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+const { Sequelize } = require("sequelize");
 
 const db = new Sequelize("checklist-mern", "root", "dev", {
   host: "localhost",
@@ -6,4 +6,4 @@ const db = new Sequelize("checklist-mern", "root", "dev", {
   logging: false,
 });
 
-export default db;
+module.exports = db;
