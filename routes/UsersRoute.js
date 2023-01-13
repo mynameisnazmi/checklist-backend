@@ -1,15 +1,13 @@
-const { Router } = require("express");
-// Local Modules
-const UsersController = require("../controllers/UsersController");
+import express from "express";
+import { getUsers, Auth } from "../controllers/UsersController.js";
 
-// Initialization
-const router = Router();
+const router = express.Router();
 
-router.get("/auth", UsersController.getUsers);
-//router.post("/", Auth);
+router.get("/users", getUsers);
+router.post("/loginAuth", Auth);
 //router.get("/products/:id", getProductById);
 // router.post("/products", saveProduct);
 // router.patch("/products/:id", updateProduct);
 // router.delete("/products/:id", deleteProduct);
 
-module.exports = router;
+export default router;

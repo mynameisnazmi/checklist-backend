@@ -1,25 +1,21 @@
-const express = require("express");
+import express from "express";
 //import FileUpload from "express-fileupload";
-const cors = require("cors");
-// Local Modules
-const UsersRoute = require("./routes/UsersRoute.js");
+import cors from "cors";
+import UsersRoute from "./routes/UsersRoute.js";
 
-// Server Initialization
+//const bodyParser = require("body-parser");
 const app = express();
-const PORT = 5000;
 
+//app.use(bodyParser.json()); // to support JSON-encoded bodies
+// app.use(
+//   bodyParser.urlencoded({  // to support URL-encoded bodies
+//     extended: true,
+//   })
+// );
 app.use(cors());
 app.use(express.json());
 //app.use(FileUpload());
 //app.use(express.static("public"));
+app.use(UsersRoute);
 
-// Routes will be written here
-app.use("/users", UsersRoute);
-
-app.listen(PORT, (error) => {
-  if (!error)
-    console.log(
-      "Server is Successfully Running, and App is listening on port " + PORT
-    );
-  else console.log("Error occurred, server can't start", error);
-});
+app.listen(5000, () => console.log("Server Up and Running..."));
