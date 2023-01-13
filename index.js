@@ -1,7 +1,7 @@
 const express = require("express");
 //import FileUpload from "express-fileupload";
 const cors = require("cors");
-// Local Modules
+
 const UsersRoute = require("./routes/UsersRoute.js");
 
 // Server Initialization
@@ -10,6 +10,7 @@ const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
+
 //app.use(FileUpload());
 //app.use(express.static("public"));
 

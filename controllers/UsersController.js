@@ -11,22 +11,28 @@ const getUsers = async (req, res) => {
   }
 };
 
-// export const Auth = async (req, res) => {
-//   console.log(req.body.nik);
-//   try {
-//     const response = await Users.findOne({
-//       where: {
-//         nik: 14077,
-//       },
-//     });
-//     res.json(response);
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
+const Auth = async (req, res) => {
+  const { nik, password } = req.body;
+
+  res.send({
+    test: "ini backend 2",
+    nik,
+    password,
+  });
+  // try {
+  //   const response = await Users.findOne({
+  //     where: {
+  //       nik: 14077,
+  //     },
+  //   });
+  //   res.json(response);
+  // } catch (error) {
+  //   console.log(error.message);
+  // }
+};
 
 // Export of all methods as object
 module.exports = {
   getUsers,
-  // method2,
+  Auth,
 };
