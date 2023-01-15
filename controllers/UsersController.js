@@ -1,11 +1,12 @@
 const Users = require("../models/UserModel");
+const responseformat = require("../utils/responsformat");
 //import path from "path";
 //import fs from "fs";
 
 const getAlluser = async (req, res) => {
   try {
     const response = await Users.findAll();
-    res.json(response);
+    responseformat(200, response, "ok", res);
   } catch (error) {
     console.log(error.message);
   }
@@ -22,9 +23,7 @@ const addUser = async (req, res) => {
       department: department,
     });
 
-    res.send({
-      Result: "Sukses",
-    });
+    responseformat(200, addUser, "ok", res);
   } catch (error) {
     console.log(error.message);
   }
@@ -39,7 +38,7 @@ const Auth = async (req, res) => {
         password: password,
       },
     });
-    res.json(response);
+    responseformat(200, response, "ok", res);
   } catch (error) {
     console.log(error.message);
   }
