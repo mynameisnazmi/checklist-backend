@@ -5,11 +5,11 @@ const responseformat = (statusCode, data, message, res) => {
       datas: data,
     },
     message: message,
-    pagination: {
-      prev: "",
-      next: "",
-      max: "",
-    },
+    // pagination: {
+    //   prev: "",
+    //   next: "",
+    //   max: "",
+    // },
   });
 };
 module.exports = responseformat;
