@@ -22,7 +22,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `line_6_as`
+-- Table structure for table `coating_1_daily`
 --
 
 CREATE TABLE IF NOT EXISTS `coating_1_daily` (
@@ -31,16 +31,15 @@ CREATE TABLE IF NOT EXISTS `coating_1_daily` (
   `Status` tinyint(1) NOT NULL,
   `Tanggal_Status` date NOT NULL,
   `Unwind_Vis` boolean NOT NULL,
-  `Unwind_Stt` boolean NOT NULL,
-  `Unwind_ArusR` double NOT NULL,
-  `Unwind_ArusS` double NOT NULL,
-  `Unwind_ArusT` double NOT NULL,
-  `Unwind_VDE_Vms` double NOT NULL,
-  `Unwind_VDE_Vge` double NOT NULL,
-  `Unwind_VNDE_Vms` double NOT NULL,
-  `Unwind_VNDE_Vge` double NOT NULL,
-  `Unwind_TempM` double NOT NULL,
-  `Unwind_VDE_Vge` double NOT NULL,
+  `Unwind_Stat` boolean NOT NULL,
+  `Unwind_ArusR` decimal(5,2) NOT NULL,
+  `Unwind_ArusS` decimal(5,2) NOT NULL,
+  `Unwind_ArusT` decimal(5,2) NOT NULL,
+  `Unwind_VDE_Vms` decimal(5,2) NOT NULL,
+  `Unwind_VDE_Vge` decimal(5,2) NOT NULL,
+  `Unwind_VNDE_Vms` decimal(5,2) NOT NULL,
+  `Unwind_VNDE_Vge` decimal(5,2) NOT NULL,
+  `Unwind_TempM` decimal(5,2) NOT NULL,
   `Unwind_Ket` text NOT NULL,
 );
  
