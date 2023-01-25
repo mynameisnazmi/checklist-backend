@@ -2,7 +2,7 @@ const responseformat = (statusCode, data, message, res) => {
   res.status(statusCode).json({
     payload: {
       status_code: statusCode,
-      datas: data,
+      data: data,
     },
     message: message,
     // pagination: {

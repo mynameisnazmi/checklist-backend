@@ -1,8 +1,7 @@
 const Users = require("../models/UserModel");
 const responseformat = require("../utils/responsformat");
 const bcrypt = require("bcrypt");
-//import path from "path";
-//import fs from "fs";
+const jwt = require("jsonwebtoken");
 
 const getAlluser = async (req, res) => {
   try {
@@ -32,6 +31,27 @@ const addUser = async (req, res) => {
     //console.log(error.message);
   }
 };
+const generateAccessToken = (user) => {
+  return jwt.sign(
+    {
+      nik: user.nik,
+      name: user.name,
+      level: user.level,
+      department: user.department,
+    },
+    "kunciRahasia",
+    {
+      // expiresIn: "5s",
+    }
+  );
+};
+
+// const generateRefreshToken = (user) => {
+//   return jwt.sign(
+//     { id: user.id, isAdmin: user.isAdmin },
+//     "kunciRahasiaRefresh"
+//   );
+// };
 
 const Auth = async (req, res) => {
   const { nik, password } = req.body;
@@ -41,22 +61,29 @@ const Auth = async (req, res) => {
         nik: nik,
       },
       attributes: ["password"],
+      raw: true,
     });
+    //compare data
     bcrypt.compare(password, getPassword.password, async (err, cmpres) => {
       if (cmpres) {
+        //get data
         const userData = await Users.findOne({
           where: {
             nik: nik,
           },
           attributes: ["nik", "name", "level", "department"],
+          raw: true,
         });
-        responseformat(200, userData, "ok", res);
+        //console.log(userData.nik);
+        const accessToken = generateAccessToken(userData);
+        //console.log(accessToken);
+        responseformat(200, accessToken, "ok", res);
       } else {
-        responseformat(404, "not ok", "Password not Correct", res);
+        responseformat(401, "", "Password not Correct", res);
       }
     });
   } catch (error) {
-    responseformat(404, "not ok", "Not Found", res);
+    responseformat(404, "", "Not Found", res);
     //    console.log(error.message);
   }
 };
