@@ -119,7 +119,9 @@ CREATE TABLE IF NOT EXISTS `coating_1_daily` (
   `RwdB_VNDE_Vge` decimal(5,2) NOT NULL,
   `RwdB_TempM` decimal(5,2) NOT NULL,
   `RwdB_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 CREATE TABLE IF NOT EXISTS `coating_1_weekly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -422,7 +424,8 @@ CREATE TABLE IF NOT EXISTS `coating_1_weekly` (
   `FanRwdB_VNDE_Vge` decimal(5,2) NOT NULL,
   `FanRwdB_TempM` decimal(5,2) NOT NULL,
   `FanRwdB_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `coating_1_monthly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -626,7 +629,8 @@ CREATE TABLE IF NOT EXISTS `coating_1_monthly` (
   `DryIR9_VNDE_Vge` decimal(5,2) NOT NULL,
   `DryIR9_TempM` decimal(5,2) NOT NULL,
   `DryIR9_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `coating_3_daily` (
   `Tanggal` date NOT NULL,
@@ -776,17 +780,6 @@ CREATE TABLE IF NOT EXISTS `coating_3_daily` (
   `TrcRol_VNDE_Vge` decimal(5,2) NOT NULL,
   `TrcRol_TempM` decimal(5,2) NOT NULL,
   `TrcRol_Ket` text NOT NULL,
-  `TrcRol_Vis` boolean NOT NULL,
-  `TrcRol_Stet` boolean NOT NULL,
-  `TrcRol_ArusR` decimal(5,2) NOT NULL,
-  `TrcRol_ArusS` decimal(5,2) NOT NULL,
-  `TrcRol_ArusT` decimal(5,2) NOT NULL,
-  `TrcRol_VDE_Vms` decimal(5,2) NOT NULL,
-  `TrcRol_VDE_Vge` decimal(5,2) NOT NULL,
-  `TrcRol_VNDE_Vms` decimal(5,2) NOT NULL,
-  `TrcRol_VNDE_Vge` decimal(5,2) NOT NULL,
-  `TrcRol_TempM` decimal(5,2) NOT NULL,
-  `TrcRol_Ket` text NOT NULL,
   `RwdA_Vis` boolean NOT NULL,
   `RwdA_Stet` boolean NOT NULL,
   `RwdA_ArusR` decimal(5,2) NOT NULL,
@@ -809,7 +802,8 @@ CREATE TABLE IF NOT EXISTS `coating_3_daily` (
   `RwdB_VNDE_Vge` decimal(5,2) NOT NULL,
   `RwdB_TempM` decimal(5,2) NOT NULL,
   `RwdB_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `coating_3_weekly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1211,7 +1205,8 @@ CREATE TABLE IF NOT EXISTS `coating_3_weekly` (
   `ExhOvn2_VNDE_Vge` decimal(5,2) NOT NULL,
   `ExhOvn2_TempM` decimal(5,2) NOT NULL,
   `ExhOvn2_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `coating_3_monthly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1283,7 +1278,8 @@ CREATE TABLE IF NOT EXISTS `coating_3_monthly` (
   `DryIR_VNDE_Vge` decimal(5,2) NOT NULL,
   `DryIR_TempM` decimal(5,2) NOT NULL,
   `DryIR_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `coating_4_daily` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1421,7 +1417,8 @@ CREATE TABLE IF NOT EXISTS `coating_4_daily` (
   `RwdB_VNDE_Vge` decimal(5,2) NOT NULL,
   `RwdB_TempM` decimal(5,2) NOT NULL,
   `RwdB_Ket` text NOT NULL,  
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `coating_4_weekly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1680,7 +1677,8 @@ CREATE TABLE IF NOT EXISTS `coating_4_weekly` (
   `RwdNearRol_VNDE_Vge` decimal(5,2) NOT NULL,
   `RwdNearRol_TempM` decimal(5,2) NOT NULL,
   `RwdNearRol_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `coating_4_monthly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1752,4 +1750,5 @@ CREATE TABLE IF NOT EXISTS `coating_4_monthly` (
   `DryIR_VNDE_Vge` decimal(5,2) NOT NULL,
   `DryIR_TempM` decimal(5,2) NOT NULL,
   `DryIR_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -75,7 +75,8 @@ CREATE TABLE IF NOT EXISTS `metalize_1_daily` (
   `ChilRol_VNDE_Vge` decimal(5,2) NOT NULL,
   `ChilRol_TempM` decimal(5,2) NOT NULL,
   `ChilRol_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_1_weekly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -400,7 +401,8 @@ CREATE TABLE IF NOT EXISTS `metalize_1_weekly` (
   `WirFed18_VNDE_Vge` decimal(5,2) NOT NULL,
   `WirFed18_TempM` decimal(5,2) NOT NULL,
   `WirFed18_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_1_monthly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -450,7 +452,8 @@ CREATE TABLE IF NOT EXISTS `metalize_1_monthly` (
   `Poly2_VNDE_Vge` decimal(5,2) NOT NULL,
   `Poly2_TempM` decimal(5,2) NOT NULL,
   `Poly2_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_2_daily` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -544,7 +547,8 @@ CREATE TABLE IF NOT EXISTS `metalize_2_daily` (
   `FanMtrTenRol_VNDE_Vge` decimal(5,2) NOT NULL,
   `FanMtrTenRol_TempM` decimal(5,2) NOT NULL,
   `FanMtrTenRol_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_2_weekly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1023,7 +1027,8 @@ CREATE TABLE IF NOT EXISTS `metalize_2_weekly` (
   `WirFed26_VNDE_Vge` decimal(5,2) NOT NULL,
   `WirFed26_TempM` decimal(5,2) NOT NULL,
   `WirFed26_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_2_monthly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1106,7 +1111,8 @@ CREATE TABLE IF NOT EXISTS `metalize_2_monthly` (
   `Poly_VNDE_Vge` decimal(5,2) NOT NULL,
   `Poly_TempM` decimal(5,2) NOT NULL,
   `Poly_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_3_daily` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1200,7 +1206,8 @@ CREATE TABLE IF NOT EXISTS `metalize_3_daily` (
   `FanMtrTenRol_VNDE_Vge` decimal(5,2) NOT NULL,
   `FanMtrTenRol_TempM` decimal(5,2) NOT NULL,
   `FanMtrTenRol_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_3_weekly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1734,7 +1741,8 @@ CREATE TABLE IF NOT EXISTS `metalize_3_weekly` (
   `WirFed32_VNDE_Vge` decimal(5,2) NOT NULL,
   `WirFed32_TempM` decimal(5,2) NOT NULL,
   `WirFed32_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_3_monthly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1828,7 +1836,8 @@ CREATE TABLE IF NOT EXISTS `metalize_3_monthly` (
   `PolyCoat_VNDE_Vge` decimal(5,2) NOT NULL,
   `PolyCoat_TempM` decimal(5,2) NOT NULL,
   `PolyCoat_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_4_daily` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -1922,7 +1931,8 @@ CREATE TABLE IF NOT EXISTS `metalize_4_daily` (
   `FanMtrTenRol_VNDE_Vge` decimal(5,2) NOT NULL,
   `FanMtrTenRol_TempM` decimal(5,2) NOT NULL,
   `FanMtrTenRol_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_4_weekly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -2456,7 +2466,8 @@ CREATE TABLE IF NOT EXISTS `metalize_4_weekly` (
   `WirFed32_VNDE_Vge` decimal(5,2) NOT NULL,
   `WirFed32_TempM` decimal(5,2) NOT NULL,
   `WirFed32_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `metalize_4_monthly` (
   `Tanggal` date NOT NULL,
   `Nama` varchar(30) NOT NULL,
@@ -2550,4 +2561,5 @@ CREATE TABLE IF NOT EXISTS `metalize_4_monthly` (
   `PolyCoat_VNDE_Vge` decimal(5,2) NOT NULL,
   `PolyCoat_TempM` decimal(5,2) NOT NULL,
   `PolyCoat_Ket` text NOT NULL,
-);
+  PRIMARY KEY (`Tanggal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -34,9 +34,9 @@ const addUser = async (req, res) => {
 const generateAccessToken = (user) => {
   return jwt.sign(
     {
-      nik: user.nik,
-      name: user.name,
-      level: user.level,
+      nik: user.ID,
+      name: user.first_name,
+      typeUser: user.typeUser,
       department: user.department,
     },
     "kunciRahasia",
@@ -58,9 +58,9 @@ const Auth = async (req, res) => {
   try {
     const getPassword = await Users.findOne({
       where: {
-        nik: nik,
+        ID: nik,
       },
-      attributes: ["password"],
+      attributes: ["pass"],
       raw: true,
     });
     //compare data
@@ -69,9 +69,9 @@ const Auth = async (req, res) => {
         //get data
         const userData = await Users.findOne({
           where: {
-            nik: nik,
+            ID: nik,
           },
-          attributes: ["nik", "name", "level", "department"],
+          attributes: ["ID", "first_name", "typeUser", "department"],
           raw: true,
         });
         //console.log(userData.nik);
